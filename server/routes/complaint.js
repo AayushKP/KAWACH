@@ -24,8 +24,6 @@ router.post("/", async (req, res) => {
     description,
     image,
     location,
-    likes: 0, // default value
-    dislikes: 0, // default value
   });
 
   try {
@@ -37,6 +35,5 @@ router.post("/", async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-
 
 module.exports = router;
