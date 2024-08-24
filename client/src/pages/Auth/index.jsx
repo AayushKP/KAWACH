@@ -1,4 +1,4 @@
-function index() {
-  return <div>index</div>;
+function Auth() {
+  return <div>Auth</div>;
 }
-export default index;
+export default Auth;

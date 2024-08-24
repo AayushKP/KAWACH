@@ -1,4 +1,4 @@
-function index() {
-  return <div>index</div>;
+function HomePage() {
+  return <div>Home</div>;
 }
-export default index;
+export default HomePage;
