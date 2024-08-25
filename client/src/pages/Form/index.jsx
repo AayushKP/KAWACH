@@ -41,7 +41,6 @@ const ComplaintForm = () => {
       if (response.ok) {
         const responseData = await response.json();
         console.log("Complaint submitted:", responseData);
-        // Reset form after successful submission
         setFormData({
           heading: "",
           description: "",
