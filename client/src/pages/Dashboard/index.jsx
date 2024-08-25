@@ -94,7 +94,7 @@ const Dashboard = () => {
           <div className="relative bg-white border border-gray-200 rounded-lg shadow-lg p-8 max-w-2xl w-full mx-4 sm:mx-6 md:mx-auto">
             <button
               onClick={handleCloseDialog}
-              className="absolute top-2 right-2 text-red-700 pr-3 pl-3 text-white rounded-full shadow-lg"
+              className="absolute top-2 right-2 text-red-700 pr-3 pl-3 rounded-full shadow-lg"
             >
               X
             </button>
@@ -109,7 +109,13 @@ const Dashboard = () => {
               />
             )}
             <p className="text-gray-700 text-sm mb-4">
-              Location: {selectedComplaint.location}
+              <span className="font-bold">
+              Description:</span> {selectedComplaint.description}
+            </p>
+            <p className="text-gray-700 text-sm mb-4">
+            <span className="font-bold">
+              Location: 
+              </span>{selectedComplaint.location}
             </p>
             <p className="text-gray-600">
               {/* Add more complaint details here if necessary */}
