@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import View from "../View";
 
 const Dashboard = () => {
   const [complaints, setComplaints] = useState([]);
@@ -48,8 +47,12 @@ const Dashboard = () => {
 
   return (
     <div className="max-w-6xl mx-auto mt-8 px-4">
-      <div><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[220%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px] -z-20"></div></div>
-      <div><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[20%] translate-y-[90%] rounded-full bg-[rgba(109,145,244,0.5)] opacity-50 blur-[80px] -z-20"></div></div>
+      <div>
+        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[220%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px] -z-20"></div>
+      </div>
+      <div>
+        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[20%] translate-y-[90%] rounded-full bg-[rgba(109,145,244,0.5)] opacity-50 blur-[80px] -z-20"></div>
+      </div>
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-bold text-center">Complaints Dashboard</h2>
         <button
@@ -59,7 +62,7 @@ const Dashboard = () => {
           Create Complaint
         </button>
       </div>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {complaints.map((complaint) => (
           <div
@@ -67,22 +70,18 @@ const Dashboard = () => {
             className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
             onClick={() => handleCardClick(complaint)}
           >
-            <h3 className="text-xl font-semibold mb-2 text-white">
-              {complaint.heading}
-            </h3>
-            
-            {complaint.image && (
-              <img
-                src={`http://localhost:3000/uploads/${complaint.image}`}
-                alt="Complaint"
-                className="w-full h-40 object-cover rounded-t-lg"
-              />
-            )}
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2 text-gray-900">
                 {complaint.heading}
               </h3>
-              <p className="text-gray-700 text-sm mb-2">
+              {complaint.image && (
+                <img
+                  src={`http://localhost:3000/uploads/${complaint.image}`}
+                  alt="Complaint"
+                  className="w-full h-40 object-cover rounded-t-lg"
+                />
+              )}
+              <p className="text-gray-700 text-sm mt-2">
                 Location: {complaint.location}
               </p>
             </div>
