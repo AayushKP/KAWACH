@@ -90,7 +90,9 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-8">
+      <div><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[220%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-80 blur-[80px] "></div></div>
+      <div><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[20%] translate-y-[90%] rounded-full bg-[rgba(109,145,244,0.5)] opacity-80 blur-[80px] "></div></div>
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-8 z-10">
         <h2 className="text-3xl font-semibold text-center text-indigo-600 mb-6">
           {isLogin ? "LOGIN" : "SIGN UP"}
         </h2>
