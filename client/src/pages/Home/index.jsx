@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import Hero from "@/assets/hero.png";
 export default function Home() {
   return (
     <div>
@@ -102,7 +102,7 @@ export default function Home() {
             </button>
           </div>
           <div className="lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="./img.png " alt="mockup" />
+            <img src={Hero} alt="mockup" />
           </div>
         </div>
       </section>
