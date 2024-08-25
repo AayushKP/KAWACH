@@ -71,7 +71,7 @@ const Dashboard = () => {
             <h3 className="text-xl font-semibold mb-2 text-white">
               {complaint.heading}
             </h3>
-            
+
             {complaint.image && (
               <img
                 src={`http://localhost:3000/uploads/${complaint.image}`}
