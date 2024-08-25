@@ -3,6 +3,7 @@ import Auth from "./pages/Auth/index";
 import Dashboard from "./pages/Dashboard/index";
 import HomePage from "./pages/Home/index";
 import ComplaintForm from "./pages/Form/index";
+import Update from "./pages/Update/index";
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +12,7 @@ function App() {
         <Route path="/auth" element={<Auth />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/create" element={<ComplaintForm />} />
+        <Route path="/update" element={<Update/>}/>
       </Routes>
     </BrowserRouter>
   );

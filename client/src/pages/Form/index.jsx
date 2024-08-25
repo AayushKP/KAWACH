@@ -44,7 +44,7 @@ const ComplaintForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-8">
+    <div className="max-w-lg mx-auto mt-8 justify-center">
       <h2 className="text-2xl font-bold mb-4">Submit a Complaint</h2>
       <form
         onSubmit={handleSubmit}
