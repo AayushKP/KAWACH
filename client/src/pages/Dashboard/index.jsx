@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import View from "../View";
 
 const Dashboard = () => {
   const [complaints, setComplaints] = useState([]);
@@ -49,12 +48,8 @@ const Dashboard = () => {
 
   return (
     <div className="max-w-6xl mx-auto mt-8 px-4">
-      <div>
-        <div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[220%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px] -z-20"></div>
-      </div>
-      <div>
-        <div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[20%] translate-y-[90%] rounded-full bg-[rgba(109,145,244,0.5)] opacity-50 blur-[80px] -z-20"></div>
-      </div>
+      <div><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[220%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px] -z-20"></div></div>
+      <div><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[20%] translate-y-[90%] rounded-full bg-[rgba(109,145,244,0.5)] opacity-50 blur-[80px] -z-20"></div></div>
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-bold text-center">Complaints Dashboard</h2>
         <button
@@ -75,7 +70,7 @@ const Dashboard = () => {
             <h3 className="text-xl font-semibold mb-2 text-white">
               {complaint.heading}
             </h3>
-
+            
             {complaint.image && (
               <img
                 src={`http://localhost:3000/uploads/${complaint.image}`}
