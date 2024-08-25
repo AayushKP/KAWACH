@@ -58,16 +58,18 @@ const ComplaintForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-8 justify-center">
-      <h2 className="text-2xl font-bold mb-4">Submit a Complaint</h2>
+    <div className="max-w-lg mx-auto mt-10 p-8 bg-gray-100 shadow-lg rounded-lg">
+      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
+        Submit a Complaint
+      </h2>
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="bg-white p-6 rounded-lg shadow-md"
         encType="multipart/form-data"
       >
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm font-semibold mb-2"
             htmlFor="heading"
           >
             Heading
@@ -78,14 +80,14 @@ const ComplaintForm = () => {
             id="heading"
             value={formData.heading}
             onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             placeholder="Enter complaint heading"
             required
           />
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm font-semibold mb-2"
             htmlFor="description"
           >
             Description
@@ -95,14 +97,15 @@ const ComplaintForm = () => {
             id="description"
             value={formData.description}
             onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             placeholder="Enter complaint description"
+            rows="4"
             required
           />
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm font-semibold mb-2"
             htmlFor="image"
           >
             Image
@@ -112,12 +115,12 @@ const ComplaintForm = () => {
             name="image"
             id="image"
             onChange={handleFileChange} // Handle file input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
           />
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm font-semibold mb-2"
             htmlFor="location"
           >
             Location
@@ -128,17 +131,24 @@ const ComplaintForm = () => {
             id="location"
             value={formData.location}
             onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             placeholder="Enter location"
             required
           />
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between space-x-2">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="w-full py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-bold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-200"
           >
-            Submit
+            Submit Complaint
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate("/dashboard")} // Navigate to the dashboard
+            className="w-full py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition duration-200"
+          >
+            Go to Dashboard
           </button>
         </div>
       </form>
